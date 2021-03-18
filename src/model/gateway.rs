@@ -616,7 +616,7 @@ impl Serialize for Presence {
 #[derive(Clone, Debug, Deserialize, Serialize)]
 #[non_exhaustive]
 pub struct Ready {
-    pub application: PartialCurrentApplicationInfo,
+    pub application: Option<PartialCurrentApplicationInfo>,
     pub guilds: Vec<GuildStatus>,
     #[serde(
         default,
